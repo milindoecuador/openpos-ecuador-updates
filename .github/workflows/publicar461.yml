@@ -1,0 +1,29 @@
+name: Publicar OpenPOS 4.6.1
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publicar461.yml', 'publication/prepare461.py']
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install cryptography==50.0.2
+      - name: Recibir instalador autorizado mediante transferencia cifrada
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python publication/prepare461.py
+      - name: Publicar instalador y manifiesto firmado
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v4.6.1 >/dev/null 2>&1; then
+            echo 'La version ya existe; no se sobrescribe.'
+            exit 1
+          fi
+          gh release create v4.6.1 release-files/* --draft --title 'OpenPOS 4.6.1 - PostgreSQL incluido' --notes-file release-notes.md
+          gh release edit v4.6.1 --draft=false --latest
+          gh release view v4.6.1 --json url,isDraft,assets
