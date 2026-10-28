@@ -3,7 +3,12 @@
 Canal de distribución del instalador Windows. El código fuente se mantiene por separado. No se publican datos de negocios, certificados ni claves privadas.
 
 ## Instalar
-Descargue `OpenPOS-Setup-VERSION.exe` desde Releases. La instalación inicial de 3.7.0 es manual. El control local permite buscar actualizaciones y habilitar la instalación automática con todos los turnos cerrados.
+
+**[Descargar OpenPOS 4.6.1 con PostgreSQL incluido](https://github.com/milindoecuador/openpos-ecuador-updates/releases/download/v4.6.1/OpenPOS-Setup-4.6.1.exe)** · [Ver la última versión publicada](https://github.com/milindoecuador/openpos-ecuador-updates/releases/latest)
+
+Cierre OpenPOS y ejecute el instalador. PostgreSQL se incluye y configura automáticamente; no hace falta crear bases ni escribir claves. La instalación, migración y reinstalación se comprobaron conservando los datos.
+
+El control local permite buscar actualizaciones y aplicar el instalador firmado conservando los datos existentes.
 
 Cada versión contiene `installer-manifest.txt`, firmado con RSA por el proveedor y con SHA256 del instalador. El cliente verifica con la clave pública incorporada. Esta firma de integridad no sustituye un certificado de editor Windows.
 
