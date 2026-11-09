@@ -1,15 +1,13 @@
 # KTEL POS para Android
 
-**Versión actual: 1.2.7**
+**Versión actual: 1.2.8**
 
-- [Descargar KTEL POS Android 1.2.7](./KTEL-POS-Android-1.2.7.apk)
-- SHA-256: `c260d773d8bfbea1386070c4b2f11f0eb1eec3f86dbc5a3df6c125290614735b`
-- [Manifiesto firmado para el actualizador](./android-manifest.txt)
+- [Descargar KTEL POS Android 1.2.8](./KTEL-POS-Android-1.2.8.apk)
+- SHA-256: `ed42679f7a3171499dd8bdc4d5258623ab8bcd6a93e1fe5efa71d9cf71f4ded4`
+- [Manifiesto firmado](./android-manifest.txt)
 
-La versión 1.2.7 corrige el actualizador: autoriza la descarga HTTPS desde `raw.githubusercontent.com`, dominio donde GitHub sirve el manifiesto firmado y la APK. La versión 1.2.6 ya corrigió la acción dentro de la pantalla para que el teléfono consulte actualizaciones Android y no el instalador Windows. Si una instalación anterior no puede actualizarse por sí sola, instala esta APK una vez manualmente; en adelante podrá comprobar el canal al abrir y desde el botón Android.
+La versión 1.2.8 corrige el error `Cannot set properties of null (setting 'textContent')` al abrir Actualizaciones dentro de Android. Conserva ocultos los controles que necesita la página de escritorio mientras presenta los controles propios de actualización Android.
 
-En **Módulos → Actualizaciones**, Android muestra su versión instalada y un botón **Buscar actualización Android**. Informa si no hay conexión, si está al día o si existe una versión nueva. La APK se verifica antes de instalar y Android solicita confirmar.
+La actualización Android se comprueba al abrir y desde **Módulos → Actualizaciones → Buscar actualización Android**. Si hay una versión, se verifica antes de pedir a Android que confirme la instalación. También conserva la corrección del host de GitHub añadido en 1.2.7.
 
-Incluye accesos a **Cocina** y **Ventas**. Cocina organiza las etapas en lista vertical en teléfono y tres columnas en tablet; refresca pedidos cada 15 segundos y guarda cambios en el servidor.
-
-Mantiene la firma Android de versiones previas. Requiere que el servidor local esté encendido y licencia LAN vigente para operar. Actualizar la APK no modifica la base de datos del POS.
+Incluye accesos nativos a **Cocina** y **Ventas**, con interfaz de cocina adaptada a teléfonos y tablets. Requiere servidor activo y licencia LAN vigente para operar; actualizar la APK no altera la base de datos del POS.
