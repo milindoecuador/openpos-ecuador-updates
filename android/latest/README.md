@@ -1,11 +1,12 @@
-# KTEL POS Android 1.2.3
+# KTEL POS Android 1.2.4
 
-Descarga pública de la terminal Android de KTEL POS.
+Descarga de la terminal Android de KTEL POS.
 
-- APK: [KTEL-POS-Android-1.2.3.apk](./KTEL-POS-Android-1.2.3.apk)
-- SHA-256: `C4CD6755DA0FC4B426D9EF053A418A573EEF35BC62F7725578BCE07098C79E1C`
-- Actualizaciones automáticas: la app consulta este manifiesto firmado al abrirse.
-- Esta APK conserva el certificado debug de la versión 1.2.1 publicada previamente; Android puede actualizarla sin desinstalarla.
-- La instalación solicita aprobación de Android. La app no contiene ni cambia la base de datos del servidor.
+- APK actual: [KTEL-POS-Android-1.2.4.apk](./KTEL-POS-Android-1.2.4.apk)
+- SHA-256: `5301BFF59489EE57C33531B7FDCEA331DF1A28BCEAC8557FB27D21047E5820C9`
+- La app comprueba actualizaciones al abrir; detecta la versión, la descarga y verifica manifiesto, integridad y certificado antes de abrir el instalador Android.
+- Android solicita confirmación para instalar. La instalación no cambia la base de datos del servidor.
+- Conserva el certificado debug de las versiones Android previas para permitir la actualización en sitio.
+- Si la PC servidor está apagada, la app conserva dirección y licencia y muestra reconexión; la configuración requiere una acción explícita.
 
-Es una terminal Android para conectarse por LAN al servidor KTEL POS instalado en una PC. Requiere que el servidor esté encendido y que la licencia LAN de esa terminal esté habilitada.
+Es una terminal Android para conectarse al servidor KTEL POS instalado en una PC. Requiere LAN y licencia adicional vigente.
