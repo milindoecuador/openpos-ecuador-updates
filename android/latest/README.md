@@ -1,15 +1,15 @@
 # KTEL POS para Android
 
-**Versión actual: 1.2.6**
+**Versión actual: 1.2.7**
 
-- [Descargar KTEL POS Android 1.2.6](./KTEL-POS-Android-1.2.6.apk)
-- SHA-256: `2a30f553f84c25830ad900da4bb962570b3850bce6f9bd2329eb51fa38557dfa`
+- [Descargar KTEL POS Android 1.2.7](./KTEL-POS-Android-1.2.7.apk)
+- SHA-256: `c260d773d8bfbea1386070c4b2f11f0eb1eec3f86dbc5a3df6c125290614735b`
 - [Manifiesto firmado para el actualizador](./android-manifest.txt)
 
-La APK revisa actualizaciones al iniciar. También puedes buscarla desde **Módulos → Actualizaciones → Buscar actualización Android**. Si no hay conexión, muestra que no pudo comprobar; si está al día, lo informa; si hay una versión, la descarga verificada y Android solicita confirmar la instalación.
+La versión 1.2.7 corrige el actualizador: autoriza la descarga HTTPS desde `raw.githubusercontent.com`, dominio donde GitHub sirve el manifiesto firmado y la APK. La versión 1.2.6 ya corrigió la acción dentro de la pantalla para que el teléfono consulte actualizaciones Android y no el instalador Windows. Si una instalación anterior no puede actualizarse por sí sola, instala esta APK una vez manualmente; en adelante podrá comprobar el canal al abrir y desde el botón Android.
 
-La versión 1.2.6 repara el botón manual que antes mostraba el actualizador del escritorio Windows y podía aparecer deshabilitado desde el teléfono. La búsqueda ahora consulta el canal Android firmado. El botón ↻ de Cocina refresca las comandas del servidor sin reiniciar la sesión.
+En **Módulos → Actualizaciones**, Android muestra su versión instalada y un botón **Buscar actualización Android**. Informa si no hay conexión, si está al día o si existe una versión nueva. La APK se verifica antes de instalar y Android solicita confirmar.
 
-Incluye accesos nativos a **Cocina** y **Ventas**. En teléfono, Cocina organiza las etapas en una lista vertical con controles táctiles amplios; en tablet las presenta en tres columnas. Los cambios de estado se guardan en el servidor y la lista se actualiza cada 15 segundos.
+Incluye accesos a **Cocina** y **Ventas**. Cocina organiza las etapas en lista vertical en teléfono y tres columnas en tablet; refresca pedidos cada 15 segundos y guarda cambios en el servidor.
 
-La instalación conserva la firma de Android 1.2.5 para permitir actualizar sobre ella. El servidor local debe estar encendido y la terminal necesita licencia LAN vigente para operar. La actualización de la APK no modifica la base de datos del POS.
+Mantiene la firma Android de versiones previas. Requiere que el servidor local esté encendido y licencia LAN vigente para operar. Actualizar la APK no modifica la base de datos del POS.
