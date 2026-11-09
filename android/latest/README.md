@@ -10,3 +10,11 @@ Descarga de la terminal Android de KTEL POS.
 - Si la PC servidor está apagada, la app conserva dirección y licencia y muestra reconexión; la configuración requiere una acción explícita.
 
 Es una terminal Android para conectarse al servidor KTEL POS instalado en una PC. Requiere LAN y licencia adicional vigente.
+## KTEL POS Android 1.2.5
+
+- Botones nativos persistentes para Cocina y Ventas.
+- Cocina muestra comandas del servidor, observaciones y estados; las transiciones de preparación se guardan en el servidor.
+- Actualización automática de comandas cada 15 segundos.
+- Diseño adaptable: etapas apiladas con controles táctiles amplios en teléfonos; tres columnas en tabletas y desplazamiento horizontal en paisaje compacto.
+- Instalación sobre 1.2.4 conservada: mismo certificado de firma. Android solicitará aceptar la actualización.
+
