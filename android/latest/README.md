@@ -1,13 +1,16 @@
 # KTEL POS para Android
 
-**Versión actual: 1.2.8**
+**Versión actual: 1.2.9**
 
-- [Descargar KTEL POS Android 1.2.8](./KTEL-POS-Android-1.2.8.apk)
-- SHA-256: `ed42679f7a3171499dd8bdc4d5258623ab8bcd6a93e1fe5efa71d9cf71f4ded4`
-- [Manifiesto firmado](./android-manifest.txt)
+- [Descargar KTEL POS Android 1.2.9](./KTEL-POS-Android-1.2.9.apk)
+- SHA-256: `be14f8803756654f82d47248c889306be8ffff96e2adb799f5850d61917a0c99`
+- [Manifiesto firmado de actualización](./android-manifest.txt)
+- [Historial y hashes](./SHA256SUMS.txt)
 
-La versión 1.2.8 corrige el error `Cannot set properties of null (setting 'textContent')` al abrir Actualizaciones dentro de Android. Conserva ocultos los controles que necesita la página de escritorio mientras presenta los controles propios de actualización Android.
+La APK permite configurar una URL LAN y una URL HTTPS privada (por ejemplo Tailscale Serve), conserva la licencia y los servidores si no hay conexión e intenta primero la LAN y después el endpoint remoto. Requiere que Tailscale esté conectado aparte en Android y en la PC, el servidor esté encendido y la licencia adicional de terminal sea válida.
 
-La actualización Android se comprueba al abrir y desde **Módulos → Actualizaciones → Buscar actualización Android**. Si hay una versión, se verifica antes de pedir a Android que confirme la instalación. También conserva la corrección del host de GitHub añadido en 1.2.7.
+La comprobación de actualización está disponible al abrir **Actualizaciones** y desde su botón. Descarga el APK, verifica manifiesto, firma/hash e identidad de paquete antes de pedir a Android que confirme la instalación. Android requiere permitir instalar actualizaciones desde la aplicación que descarga el archivo.
 
-Incluye accesos nativos a **Cocina** y **Ventas**, con interfaz de cocina adaptada a teléfonos y tablets. Requiere servidor activo y licencia LAN vigente para operar; actualizar la APK no altera la base de datos del POS.
+Incluye accesos de **Cocina** y **Ventas**, y vistas adaptables para teléfonos y tablets. Actualizar la APK no altera la base de datos de KTEL POS.
+
+Build local: `assembleDebug`, con la misma firma Android del canal 1.2.8. No es una compilación de tienda Play Store.
