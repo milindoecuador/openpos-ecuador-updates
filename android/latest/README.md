@@ -1,16 +1,14 @@
 # KTEL POS para Android
 
-**Versión actual: 1.2.9**
+**Versión actual: 1.3.0**
 
-- [Descargar KTEL POS Android 1.2.9](./KTEL-POS-Android-1.2.9.apk)
-- SHA-256: `be14f8803756654f82d47248c889306be8ffff96e2adb799f5850d61917a0c99`
+- [Descargar KTEL POS Android 1.3.0](./KTEL-POS-Android-1.3.0.apk)
+- SHA-256: `3916a034529ef1291ae8e6b23762c530dee361aaccf1f653c42ad075a93e3bb3`
 - [Manifiesto firmado de actualización](./android-manifest.txt)
 - [Historial y hashes](./SHA256SUMS.txt)
 
-La APK permite configurar una URL LAN y una URL HTTPS privada (por ejemplo Tailscale Serve), conserva la licencia y los servidores si no hay conexión e intenta primero la LAN y después el endpoint remoto. Requiere que Tailscale esté conectado aparte en Android y en la PC, el servidor esté encendido y la licencia adicional de terminal sea válida.
+Incluye punto de venta móvil, acceso a comandas de cocina, vistas adaptables para teléfono/tablet, búsqueda y verificación automática de actualizaciones, y asistente de acceso remoto privado con Tailscale Serve. Conserva el certificado Android del canal anterior; la actualización se instala encima y no modifica la base de datos del servidor.
 
-La comprobación de actualización está disponible al abrir **Actualizaciones** y desde su botón. Descarga el APK, verifica manifiesto, firma/hash e identidad de paquete antes de pedir a Android que confirme la instalación. Android requiere permitir instalar actualizaciones desde la aplicación que descarga el archivo.
+Para acceso remoto, instala Tailscale oficial en Android y PC, incorpóralos al mismo tailnet, habilita HTTPS privado con `tailscale serve 8000` en la PC y configura en la app la dirección `.ts.net`. La PC debe estar encendida; no se expone el puerto con Funnel. La licencia adicional de terminal sigue siendo obligatoria.
 
-Incluye accesos de **Cocina** y **Ventas**, y vistas adaptables para teléfonos y tablets. Actualizar la APK no altera la base de datos de KTEL POS.
-
-Build local: `assembleDebug`, con la misma firma Android del canal 1.2.8. No es una compilación de tienda Play Store.
+Compilación de evaluación con certificado Android del canal existente; no es una publicación de Play Store.
